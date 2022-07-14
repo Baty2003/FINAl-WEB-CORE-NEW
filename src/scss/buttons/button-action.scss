@@ -1,0 +1,26 @@
+@import "vars-colors.scss";
+
+.button-action{
+	font-family: "TT Lakes";
+	position: relative;
+	background: $butMenuCol;
+	padding: 5px 26px 5px 12px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: right;
+	border: none;
+	border-radius: 16px;
+	text-transform: uppercase;
+
+	&::after{
+		content:'';
+		width:7px;
+		height:10px;
+		background:transparent url(../img/icon/dropdown.svg) no-repeat;
+		position:absolute;
+		right:12px;
+		top:35%;
+	}
+}

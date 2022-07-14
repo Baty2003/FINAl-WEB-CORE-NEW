@@ -1,0 +1,52 @@
+
+@import "fonts.scss";
+
+
+html,body {
+	box-sizing: border-box;
+	height: 100%;
+  }
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+
+  body{
+	font-family: "TT Lakes","Arial", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	min-width: 320px;
+	margin: 0;
+	padding: 0 0;
+	overflow-x:scroll;
+	min-width: 320px;
+  }
+
+@import "header.scss";
+@import "nav-header.scss";
+@import "lists-&-menu/nav-menu.scss";
+
+@import "title.scss";
+@import "main.scss";
+@import "slider.scss";
+@import "description.scss";
+@import "section.scss";
+@import "commercial-link.scss";
+
+@import "buttons/button-more.scss";
+@import "buttons/button-action.scss";
+@import "buttons/button-icon.scss";
+@import "buttons/change-button.scss";
+
+@import "swiper/swiper.scss";
+@import "swiper/slide-description.scss";
+@import "swiper/slide-repair-techniques.scss";
+@import "swiper/slide-price";
+
+@import "footer.scss";
+@import "footer-info.scss";
+
+@import "table-price.scss";
+
+@import "lists-&-menu/list-item.scss";
+@import "lists-&-menu/mobile-menu.scss";
+@import "flex-container.scss"

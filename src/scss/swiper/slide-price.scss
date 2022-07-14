@@ -1,0 +1,34 @@
+@import "vars-colors.scss";
+
+.slide-price {
+	box-sizing: border-box;
+	height: 200px;
+	width: 260px;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: white;
+
+	&__item {
+	
+	}
+
+	&__name-field{
+		color: $greyText;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	&__value-field{
+		line-height: 18px;
+		letter-spacing: 0.2px;
+		margin: 5px 0 0 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__button-action{
+		top: -10px;
+	}
+}

@@ -1,0 +1,19 @@
+@import "vars-colors.scss";
+
+.commercial-link {
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.2px;
+font-weight: 500;
+text-decoration: none;
+color: $textCol;
+
+	&__icon {
+		display: inline-block;
+		background: transparent url(../img/icon/arrowForLink.svg) no-repeat;
+		width: 7px;
+		height: 12px;
+		vertical-align: middle;
+		margin-left: 5px;
+	}
+}

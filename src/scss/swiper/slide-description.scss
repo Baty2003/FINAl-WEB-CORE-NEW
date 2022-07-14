@@ -1,0 +1,37 @@
+@import "vars-colors.scss";
+
+.slide-description{
+	display: flex;
+	box-sizing: border-box;
+	background: white;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 16px;
+	width: 240px;
+	height: 70px;
+	border: 1px solid $pseudoCol;
+	border-radius: 6px;
+
+	&__img{
+		display: block;
+	}
+	
+	&__link{
+		flex-shrink: 0;
+		display: block;
+		min-width: 40px;
+		height: 40px;
+		background: transparent url(../img/icon/goBrend.svg) no-repeat;
+	}
+
+	@media (min-width:768px){
+		&{
+			width: 224px;	
+		}
+	}
+	@media (min-width:1120px){
+		&{
+			width: 240px;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+
+.slider {
+	display: flex;
+	overflow-x: scroll;
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+
+	&::-webkit-scrollbar{
+		display: none;
+	}
+
+	&__item {
+		display: block;
+		padding: 8px 14px;
+		flex-shrink: 0;
+		text-decoration: none;
+		font-size: 16px;
+		color: #7E7E82	;
+	}
+
+	&__item--active {
+		border: 2px solid #B8FFEC;
+		border-radius: 6px;
+		background: white;
+	}
+
+	@media (min-width:1120px){
+	 	&{
+			flex-wrap: wrap;
+		}
+	}
+}

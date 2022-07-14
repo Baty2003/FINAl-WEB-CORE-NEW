@@ -1,0 +1,58 @@
+.mobile-menu {
+	display: none;
+	background: white;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 320px;
+
+	&__container{
+		padding: 13px 24px 32px 24px;
+	}
+	&__item-logo{
+		margin: 5px 0 0 0;
+	}
+	&__list-item{
+		margin-top: 38px;
+	}
+	&__email {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: -0.2px;
+		color: #1b1c21;
+		margin: 20px 0 0 0;
+	}
+	&__phone {
+		font-size: 24px;
+		line-height: 24px;
+		letter-spacing: -0.6px;
+		font-weight: bold;
+		color: #1b1c21;
+		margin: 20px 0 0 0;
+	}
+	&__list-change-lang {
+		margin-top:44px;
+	}
+	&__change-button {
+		margin-right: 7px;
+	}
+	&__footer {
+		margin-top: 268px;
+	}
+
+	@media (min-width:1440px){
+		&{
+			display: block;	
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

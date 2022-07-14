@@ -1,0 +1,104 @@
+@import "vars-colors.scss";
+
+.section{
+	background: $bgColor;
+
+	&--mt40{
+		margin-top: 40px;
+	}
+	&__title{
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		text-transform: uppercase;
+		color: #7E7E82;
+		font-weight: normal;
+		margin: 0;
+		border-top: 1px solid #D9FFF5;
+		background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+		height: 80px;
+		margin-bottom: 16px;
+		margin-top: 24px;
+		padding: 16px;
+	}
+	&__text{
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.2px;
+	}
+	&__text--w50{
+		width: 50%;
+	}
+
+	&__table-price{
+		margin: 32px 0 24px 0;
+		display: none;
+	}
+
+	@media (min-width:768px){
+		&__title{
+			height: 56px;
+		}
+		&__swiper--disable-768px{
+			display: none;
+		}
+		&__table-price{
+			display:table;
+		}
+	}
+	@media (min-width:1120px){
+		&__table-price{
+			margin: 32px 0 24px 0;
+		}
+	}
+}
+
+
+
+.read-more {
+	display: block;
+	position: relative;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0px;
+}
+.read-more::before {
+	content: "";
+	width: 8px;
+	height: 10px;
+	position: absolute;
+	background: url(../img/icon/readMor.svg);
+}
+
+.section__read-more::before {
+	top: 6px;
+	left: -20px;
+}
+
+.section__read-more {
+	margin-left: 57px;
+}
+
+.section__read-more{
+	margin-top: 10px;
+}
+
+.section__read-more--show{
+	display: none;
+}
+.section__read-more--less{
+	display: none;
+	margin-top: 45px;
+}
+.section__read-more--less::before{
+	background: url(../img/icon/read-less.svg);
+}
+
+@media (min-width:768px) {
+	.section__read-more--show{
+		display: block;
+	}
+}

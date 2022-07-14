@@ -1,0 +1,45 @@
+@import "vars-colors.scss";
+
+.slide-repair-techniques {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 16px;
+	border: 1px solid $pseudoCol;
+	border-radius: 6px;
+	width: 240px;
+	height: 160px;
+	background: white;
+	
+
+	&__name { 
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		font-weight: 500;
+		text-align: left;
+		align-self: flex-start;
+		margin: 0;
+	}
+
+	&__link {
+		display: block;
+		min-width: 40px;
+		height: 40px;
+		background: transparent url(../img/icon/goBrend.svg) no-repeat;
+		align-self: flex-end;
+	}
+
+
+	@media (min-width:768px){
+		&{
+			width: 224px;	
+		}
+	}
+	@media (min-width:1120px){
+		&{
+			width: 240px;
+		}
+	}
+}

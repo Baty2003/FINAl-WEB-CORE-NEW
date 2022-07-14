@@ -1,0 +1,30 @@
+@import "vars-colors.scss";
+
+.footer-info {
+	display: grid;
+	grid-template-columns: 1fr;
+	&__item {
+		text-align: center;
+		margin: 0 0 16px 0;
+	}
+
+	@media (min-width:768px){
+		&{
+			grid-template-columns: 2fr 3fr 2fr;
+		}
+
+		&__item{
+			margin: 0;
+			&--right{
+				text-align: right;
+			}
+			&--left{
+				text-align: left;
+			}
+			&--center{
+				text-align: center;
+
+			}
+		}
+	}
+}

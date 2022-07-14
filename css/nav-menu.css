@@ -1,0 +1,132 @@
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu__item {
+  margin-right: 16px;
+}
+
+.nav-menu__item:last-child {
+  margin-right: 0;
+}
+
+.nav-menu__menu-burger {
+  position: relative;
+  margin: 4px 16px 0 0;
+}
+
+.nav-menu__item-logo {
+  width: 100px;
+  height: 50px;
+}
+
+.nav-menu__link {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-menu__link::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #41F6D7;
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  bottom: -15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-menu__link:hover.nav-menu__link::after {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.nav-menu__label {
+  display: none;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: #1B1C21;
+  font-weight: 500;
+}
+
+.nav-menu--middle-screen {
+  margin-right: 42px;
+  display: none;
+}
+
+.nav-menu--pseudo-left::before {
+  content: "";
+  width: 2px;
+  height: 32px;
+  background: #EAEAEA;
+  position: absolute;
+  left: -21px;
+  top: 4px;
+}
+
+@media (min-width: 768px) {
+  .nav-menu--middle-screen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-menu__menu-burger {
+    margin-right: 42px;
+  }
+  .nav-menu__menu-burger::after {
+    content: "";
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    position: absolute;
+    right: -20px;
+    top: 4px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .nav-menu__item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-menu__item {
+    margin-right: 32px;
+  }
+  .nav-menu__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    height: auto;
+  }
+  .nav-menu__label {
+    display: block;
+    margin-right: 9px;
+  }
+  .nav-menu--middle-screen,
+  .nav-menu--pseudo-left::before {
+    display: none;
+  }
+}
