@@ -13,6 +13,7 @@
 	border: none;
 	border-radius: 16px;
 	text-transform: uppercase;
+	transition: 0.3s;
 
 	&::after{
 		content:'';
@@ -22,5 +23,15 @@
 		position:absolute;
 		right:12px;
 		top:35%;
+	}
+
+	&:hover{
+		transform: translateX(1px) scale(1.02);
+		opacity: 0.8;
+		color: rgba($color: $borderBg, $alpha: 0.9);
+	}
+
+	&:active{
+		filter: invert(1);
 	}
 }

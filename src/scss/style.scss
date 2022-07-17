@@ -4,7 +4,6 @@
 
 html,body {
 	box-sizing: border-box;
-	height: 100%;
   }
   *, *:before, *:after {
 	box-sizing: inherit;
@@ -17,36 +16,40 @@ html,body {
 	min-width: 320px;
 	margin: 0;
 	padding: 0 0;
-	overflow-x:scroll;
+	overflow-x:hidden;
 	min-width: 320px;
   }
 
-@import "header.scss";
-@import "nav-header.scss";
+
+@import "flex-container.scss";
+
+@import "header/header.scss";
+@import "header/nav-header.scss";
+
 @import "lists-&-menu/nav-menu.scss";
+@import "lists-&-menu/list-item.scss";
 
-@import "title.scss";
-@import "main.scss";
-@import "slider.scss";
-@import "description.scss";
-@import "section.scss";
-@import "commercial-link.scss";
 
-@import "buttons/button-more.scss";
+@import "buttons/read-more.scss";
 @import "buttons/button-action.scss";
 @import "buttons/button-icon.scss";
 @import "buttons/change-button.scss";
+
+@import "title.scss";
+@import "main/main.scss";
+@import "main/slider.scss";
+@import "main/description.scss";
+@import "main/section.scss";
+@import "main/commercial-link.scss";
+@import "main/table-price.scss";
 
 @import "swiper/swiper.scss";
 @import "swiper/slide-description.scss";
 @import "swiper/slide-repair-techniques.scss";
 @import "swiper/slide-price";
 
-@import "footer.scss";
-@import "footer-info.scss";
+@import "footer/footer.scss";
+@import "footer/footer-info.scss";
 
-@import "table-price.scss";
-
-@import "lists-&-menu/list-item.scss";
-@import "lists-&-menu/mobile-menu.scss";
-@import "flex-container.scss"
+@import "modal-window/mobile-menu.scss";
+@import "modal-window/feedback.scss";

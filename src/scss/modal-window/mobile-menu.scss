@@ -1,5 +1,7 @@
 .mobile-menu {
 	display: none;
+	flex-direction: column;
+	justify-content: space-between;
 	background: white;
 	position: relative;
 	top: 0;
@@ -32,19 +34,43 @@
 		margin: 20px 0 0 0;
 	}
 	&__list-change-lang {
-		margin-top:44px;
+		margin-top:14px;
+	}
+
+	@media (min-width:768px){
+		&__list-change-lang{
+			margin-top: 42px;
+		}
 	}
 	&__change-button {
 		margin-right: 7px;
 	}
-	&__footer {
-		margin-top: 268px;
-	}
+	
+	
 
 	@media (min-width:1440px){
 		&{
-			display: block;	
+			display: flex;
 		}
+
+		&__button-close{
+			display: none;
+		}
+
+		&__footer{
+			margin-top: 170px;
+		}
+	}
+
+	&--absolute{
+		display: flex;
+		position: fixed;
+		height: 100vh;
+		top: 0;
+		left: -320px;
+		transform: translateX(320px);
+		z-index: 1000;
+		box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
 	}
 }
 

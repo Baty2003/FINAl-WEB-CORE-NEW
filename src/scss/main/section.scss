@@ -28,9 +28,7 @@
 		line-height: 18px;
 		letter-spacing: 0.2px;
 	}
-	&__text--w50{
-		width: 50%;
-	}
+
 
 	&__table-price{
 		margin: 32px 0 24px 0;
@@ -47,6 +45,9 @@
 		&__table-price{
 			display:table;
 		}
+		&__text--w50{
+			width: 50%;
+		}
 	}
 	@media (min-width:1120px){
 		&__table-price{
@@ -55,23 +56,6 @@
 	}
 }
 
-
-
-.read-more {
-	display: block;
-	position: relative;
-	line-height: 24px;
-	font-size: 16px;
-	font-weight: 500;
-	letter-spacing: 0px;
-}
-.read-more::before {
-	content: "";
-	width: 8px;
-	height: 10px;
-	position: absolute;
-	background: url(../img/icon/readMor.svg);
-}
 
 .section__read-more::before {
 	top: 6px;

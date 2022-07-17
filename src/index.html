@@ -17,7 +17,7 @@
                                     <div class="nav-header__item nav-header--none-desktop">
                                         <ul class="nav-menu">
                                             <li class="nav-menu__item nav-menu__menu-burger">
-                                            <button class="button-icon button-icon--burger-menu"></button></li>
+                                            <button class="button-icon button-icon--burger-menu" id="buttonOpenMobileMenu"></button></li>
                                             <li class="nav-menu__item nav-menu__item-logo"><a href="#" class="nav-menu__link"><img
                                                         class="nav-menu__link-img" src="./img/icon/logo_cps.svg" alt="Логотип CPS"></a></li>
                                         </ul>
@@ -32,10 +32,10 @@
                                                         class="nav-menu__link-img" src="./img/icon/profile.svg" alt="Иконка профиля"></a></li>
                                         </ul>
                                         <ul class="nav-menu nav-menu--pseudo-left">
-                                            <li class="nav-menu__item"><a href="#" class="nav-menu__link"><span
+                                            <li class="nav-menu__item"><a href="#" class="nav-menu__link" id="buttonOpenFeedbackMenu"><span
                                                         class="nav-menu__label">Оставить заявку</span><img
                                                         class="nav-menu__link-img" src="./img/icon/repair.svg" alt="Иконка ремонта"></a></li>
-                                            <li class="nav-menu__item"><a href="#" class="nav-menu__link"><span
+                                            <li class="nav-menu__item"><a href="#" class="nav-menu__link" id="buttonOpenOrderCallMenu"><span
                                                         class="nav-menu__label">Статус ремонта</span><img class="nav-menu__link-img"
                                                         src="./img/icon/checkstatus.svg" alt="Иконка статуса"></a></li>
                                         </ul>
@@ -58,7 +58,7 @@
                         <div class="description__desciption container-menu">
                             <p class="description__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                             <p class="description__text"><span class="description__text--middle-screen">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span><span class="description__text--desktop">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                            <span class="description__read-more button-more">Читать далее</span>
+                            <span class="description__read-more read-more">Читать далее</span>
                         </div>
                         <div class="description__img">
                             <img src="img/MG_3223.jpg" alt="Логотип в офисе CPS">
@@ -70,9 +70,7 @@
                                 </h2>
                             <div class="swiper-container">
                                 <div class="swiper">
-                                    <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-                                        <!-- Slides -->
                                         <div class="swiper-slide swiper-slide__slide-description">
                                             <div class="slide-description"><img class="slide-description__img"
                                                     src="img/brends/lenovo-logo.png" alt=""><a class="slide-description__link" href="#"></a>
@@ -340,50 +338,51 @@
                         <div class="footer-info footer__footer-info">
                             <p class="footer-info__item footer-info__item--left">© 2019 CPS <br>
                                 Разработано командой Apesong </p>
-                            <p class="footer-info__item footer-info__item--center">Политика конфиденциальности</p>
+                            <p class="footer-info__item footer-info__item--center"><a href="#" class="footer-info__link">Политика конфиденциальности</a></p>
                             <p class="footer-info__item footer-info__item--right">Информация, размещенная на данной странице, не является публичной офертой</p>
                         </div>
                 </footer>
             </div>
         <div class="flex-container__mobile-menu">
-            <div class="mobile-menu">
-                <div class="mobile-menu__container">
-                    <div class="nav-header">
-                        <div class="nav-header__item nav-menu">
-                            <!-- <button class="nav-menu__item button-icon button-icon--close"></button> -->
-                            <a href="#" class="nav-menu__item mobile-menu__item-logo"><img src="./img/icon/logo_cps.svg"
-                                    alt="Логотип CPS"></a>
+            <div class="mobile-menu mobile-menu__container">
+                    <div>
+                        <div class="nav-header">
+                            <div class="nav-header__item nav-menu">
+                                <button class="nav-menu__item button-icon button-icon--close mobile-menu__button-close" id="buttonCloseMobileMenu"></button>
+                                <a href="#" class="nav-menu__item mobile-menu__item-logo"><img src="./img/icon/logo_cps.svg"
+                                        alt="Логотип CPS"></a>
+                            </div>
+                            <div class="nav-header__item">
+                                <button class="button-icon button-icon--search"></button>
+                            </div>
                         </div>
-                        <div class="nav-header__item">
-                            <button class="button-icon button-icon--search"></button>
-                        </div>
+                        <ul class="list-item mobile-menu__list-item">
+                            <li class="list-item__item list-item__item--active"><a href="#" class="list-item__link">
+                                    Ремонт техники
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Услуги и сервисы
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Корпоративным клиентам
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Продавцам техники
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Партнерам
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Производителям
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Наши сервисные центры
+                                </a></li>
+                            <li class="list-item__item"><a href="#" class="list-item__link">
+                                    Контакты
+                                </a></li>
+                        </ul>
                     </div>
-                    <ul class="list-item mobile-menu__list-item">
-                        <li class="list-item__item list-item__item--active"><a href="#" class="list-item__link">
-                                Ремонт техники
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Услуги и сервисы
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Корпоративным клиентам
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Продавцам техники
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Партнерам
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Производителям
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Наши сервисные центры
-                            </a></li>
-                        <li class="list-item__item"><a href="#" class="list-item__link">
-                                Контакты
-                            </a></li>
-                    </ul>
                     <footer class="mobile-menu__footer">
                         <ul class="nav-menu">
                             <li class="nav-menu__item"><a href="#" class="nav-menu__link"><img src="./img/icon/call.svg"
@@ -401,10 +400,34 @@
                             <button class="change-button mobile-menu__change-button">CH</button>
                         </div>
                     </footer>
-                </div>
             </div>
         </div>
     </div>
+
+    <div class="feedback feedback--pb75px" id="feedbackMenu">
+        <button class="button-icon button-icon--close feedback__button-icon" id="buttonCloseFeedbackMenu"></button>
+        <h2 class="title feedback__title">Обратная связь</h2>
+        <form action="#" class="feedback__form">
+            <input type="text" class="feedback__field feedback__field--mb16px" name="name" placeholder="Имя">
+            <input type="tel" class="feedback__field feedback__field--mb16px" name="tel" placeholder="Телефон">
+            <input type="email" class="feedback__field feedback__field--mb16px" name="email" placeholder="Электронная почта">
+            <textarea class="feedback__text-area feedback__field--mb16px" name="message"  placeholder="Сообщение"></textarea>
+            <p class="feedback__agreement feedback__agreement--mb18px feedback__agreement--mt16px">Нажимая “отправить”, вы даете согласие на <a href="#" class="feedback__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="feedback__link">политикой конфиденциальности</a></p>
+            
+            <div class="feedback__container-button"><button class="button-action" type="submit">Отправить</button></div>
+        </form>
+    </div>
+
+    <div class="feedback feedback--pb75px" id="orderCallMenu">
+        <button class="button-icon button-icon--close feedback__button-icon" id="buttonCloseOrderCallMenu"></button>
+        <h2 class="title feedback__title">Заказать звонок</h2>
+        <form action="#" class="feedback__form">
+            <input type="tel" class="feedback__field feedback__field--mb16px" name="tel" placeholder="Телефон">
+            <p class="feedback__agreement feedback__agreement--mb18px feedback__agreement--mt16px">Нажимая “отправить”, вы даете согласие на <a href="#" class="feedback__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="feedback__link">политикой конфиденциальности</a></p>
+            <div class="feedback__container-button"><button class="button-action" type="submit">Отправить</button></div>
+        </form>
+    </div>
+
 </body>
 </html>
 

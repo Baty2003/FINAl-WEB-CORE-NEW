@@ -1,4 +1,4 @@
-
+@import "vars-colors.scss";
 
 .slider {
 	display: flex;
@@ -16,11 +16,21 @@
 		flex-shrink: 0;
 		text-decoration: none;
 		font-size: 16px;
-		color: #7E7E82	;
+		color: $greyText;
+		transition: all 0.5s;
+
+		&:hover{
+			border: 2px solid $borderSlider;
+			margin: 0 4px;
+			background: white;
+			color: black;
+			border-radius: 6px;
+			opacity: 0.7;
+		}
 	}
 
 	&__item--active {
-		border: 2px solid #B8FFEC;
+		border: 2px solid $borderSlider;
 		border-radius: 6px;
 		background: white;
 	}

@@ -27,6 +27,10 @@
 	&__read-more {
 		margin-top: -6px;
 		left: 29px;
+		&::before{
+			left: -22px;
+			top: 7px;
+		}
 	}
 
 	&__img img{

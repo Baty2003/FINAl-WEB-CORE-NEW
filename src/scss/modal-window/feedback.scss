@@ -1,0 +1,121 @@
+@import "vars-colors.scss";
+
+.feedback {
+	position: fixed;
+	background: white;
+	top: 0;
+	right: -325px;
+	z-index: 2000;
+	width: 320px;
+	height: 100vh;
+	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+	transition: all 0.5s;
+
+	&--active{
+		display: block;
+		transform: translateX(-325px);
+	}
+
+	&--pb75px{
+		padding-bottom: 75px;
+	}
+	
+	&__button-icon{
+		margin: 24px 0 0 16px;
+	}
+
+	&__form{
+		padding: 0 16px;
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		height: 48px;
+		border: 1px solid $pseudoCol;
+		font-size: 18px;
+		border-radius: 8px;
+		font-family: "TT Lakes";
+
+		&::placeholder{
+			padding-left: 16px;
+			color: $textPlaceholder;
+			font-size: 16px;
+			font-family: "TT Lakes";
+			line-height: 24px;
+			letter-spacing: -0.2;
+		}
+
+		&--mb16px{
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title{
+		padding: 0 0 0 16px;
+		margin: 40px 0 24px 0;
+		background: none;
+		&::before{
+			top: 0;
+		}
+	}
+	
+	&__text-area {
+		display: block;
+		width: 100%;
+		height: 118px;
+		border: 1px solid $pseudoCol;
+		font-size: 18px;
+		border-radius: 8px;
+		font-family: "TT Lakes";
+
+		&::placeholder{
+			padding: 10px 0 0 16px;
+			color: $textPlaceholder;
+			font-size: 16px;
+			font-family: "TT Lakes";
+			line-height: 24px;
+			letter-spacing: -0.2;
+		}
+	}
+
+	&__agreement {
+		color: $greyText;
+		font-size: 14px;
+		line-height: 16px;
+
+		&__agreement--mb18px{
+			margin-bottom: 16px;
+		}
+		&__agreement--mt16px{
+			margin-top: 16px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $butMenuCol;
+	}
+
+	&__container-button{
+		text-align: right;
+	}
+
+	@media (min-width:1000px){
+		&{
+			width: 440px;
+			right: -520px;
+		}
+
+		&--active{
+			transform: translateX(-520px);
+		}
+
+		&__button-icon{
+			margin: 0;
+			position: absolute;
+			top: 40px;
+			left: -70px;
+		}
+	}
+}

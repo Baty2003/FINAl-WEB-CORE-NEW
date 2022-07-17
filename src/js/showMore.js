@@ -14,19 +14,18 @@ const initLessMoreButton = function (
   }
 
   let elemsHidden = containersElements.querySelectorAll(
-    `.swiper-slide:nth-child(${countHiddenElements}) ~ .swiper-slide`
+    `.swiper-slide:nth-child(${countHiddenElements}) ~ .swiper-slide:not(.swiper-slide-duplicate-prev, .swiper-slide-duplicate-active,.swiper-slide-prev,.swiper-slide-active, .swiper-slide-next)`
   )
 
-  if(breakpoint.matches === true) {
-	for (const elem of elemsHidden) {
-		elem.style.display = 'none'
-	  }
+  if (breakpoint.matches === true) {
+    for (const elem of elemsHidden) {
+      elem.style.display = 'none'
+    }
   }
-
 
   buttonMore.addEventListener('click', () => {
     for (const elem of elemsHidden) {
-      elem.style.display = 'block'
+      elem.style.display = 'inherit'
     }
     buttonMore.style.display = 'none'
     buttonLess.style.display = 'block'
@@ -41,41 +40,17 @@ const initLessMoreButton = function (
   })
 
   window.addEventListener('resize', () => {
-	if (breakpoint.matches === true){
-		for (const elem of elemsHidden) {
-			elem.style.display = 'none'
-		}	
-	} else {
-		for (const elem of elemsHidden) {
-			elem.style.display = 'block'
-		}	
-	} 
+    if (breakpoint.matches === true) {
+      for (const elem of elemsHidden) {
+        elem.style.display = 'none'
+      }
+    } else {
+      for (const elem of elemsHidden) {
+        elem.style.display = null
+        console.log(elemsHidden)
+      }
+    }
   })
 }
 
 export { initLessMoreButton }
-
-// const showMore = function () {
-//   let elements = document.querySelectorAll(
-//     '.swiper-slide:nth-of-type(8) ~ .swiper-slide'
-//   )
-//   for (const elem of elements) {
-//     elem.style.display = 'block'
-//   }
-//   buttonShowMore.style.display = 'none'
-//   buttonShowLess.style.display = 'block'
-// }
-
-// const showLess = function () {
-//   let elements = document.querySelectorAll(
-//     '.swiper-slide:nth-of-type(8) ~ .swiper-slide'
-//   )
-//   for (const elem of elements) {
-//     elem.style.display = 'none'
-//   }
-//   buttonShowMore.style.display = 'block'
-//   buttonShowLess.style.display = 'none'
-// }
-
-// buttonShowMore.addEventListener('click', showMore)
-// buttonShowLess.addEventListener('click', showLess)

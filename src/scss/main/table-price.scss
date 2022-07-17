@@ -5,7 +5,7 @@
 	box-sizing:border-box;
 	border-collapse: collapse;
 
-	
+
 
 	&__row:nth-child(2) td:first-child {
         border-top-left-radius: 6px;
@@ -38,11 +38,15 @@
 	&__row {
 		background: white;
 		border-radius: 6px;
+		transition: 0.5s;
 		&:not(&:last-child){
 			border-bottom: 1px solid $pseudoCol;
 		}
-		
-
+	
+		&:hover{
+			transform: translateX(4px);
+		}
+	
 	}
 
 	&__cell {

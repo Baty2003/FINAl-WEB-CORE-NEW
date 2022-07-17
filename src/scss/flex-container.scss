@@ -2,6 +2,15 @@
 	display: block;
 	flex-direction: row-reverse;
 
+	&__content{
+		position: relative;
+		transition: all 0.3s;
+		&--blur{
+			filter: opacity(0.4) blur(1px);
+		}
+	}
+
+
 
 	@media (min-width:1440px){
 		&{

@@ -1,11 +1,29 @@
 @import "vars-colors.scss";
 
 .footer-info {
+	
 	display: grid;
 	grid-template-columns: 1fr;
+
 	&__item {
 		text-align: center;
 		margin: 0 0 16px 0;
+	}
+
+	&__link{
+		color: $butMenuCol;
+		text-decoration: none;
+		display: block;
+		transition: 0.5s;
+
+		&:hover{
+			transform: scale(1.05);
+			color: $borderBg;
+		}
+
+		&:active{
+			transform: scale(1.1);
+		}
 	}
 
 	@media (min-width:768px){
