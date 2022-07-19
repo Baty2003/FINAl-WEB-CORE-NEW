@@ -1509,30 +1509,53 @@ body {
     margin: 0 20px 16px 0;
   }
 }
-.slide-description {
+.slide-content {
   display: flex;
   box-sizing: border-box;
   background: white;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
   width: 240px;
-  height: 70px;
+  justify-content: space-between;
   border: 1px solid #EAEAEA;
   border-radius: 6px;
   transition: all 0.5s;
 }
-.slide-description:hover {
+@media (min-width: 768px) {
+  .slide-content {
+    width: 224px;
+  }
+}
+@media (min-width: 1120px) {
+  .slide-content {
+    width: 240px;
+  }
+}
+.slide-content:hover {
   border: 1px solid #B8FFEC;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.2);
   margin-left: 15px;
   margin-right: 15px;
 }
-.slide-description__img {
+.slide-content--brends {
+  align-items: center;
+  height: 70px;
+  padding: 0 16px;
+}
+.slide-content--repair-techniques {
+  padding: 16px;
+  height: 160px;
+  flex-direction: column;
+}
+.slide-content--price {
+  height: 200px;
+  width: 260px;
+  padding: 16px;
+  flex-direction: column;
+}
+.slide-content__img {
   display: block;
 }
-.slide-description__link {
+.slide-content__link {
   flex-shrink: 0;
   display: block;
   min-width: 40px;
@@ -1540,46 +1563,19 @@ body {
   background: transparent url(./static/goBrend.svg) no-repeat;
   transition: 0.5s;
 }
-.slide-description__link:hover {
+.slide-content__link:hover {
   transform: translateX(3px) scale(1.05);
   -webkit-filter: contrast(3);
           filter: contrast(3);
 }
-.slide-description__link:active {
+.slide-content__link:active {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
-@media (min-width: 768px) {
-  .slide-description {
-    width: 224px;
-  }
+.slide-content__link--fe {
+  align-self: flex-end;
 }
-@media (min-width: 1120px) {
-  .slide-description {
-    width: 240px;
-  }
-}
-
-.slide-repair-techniques {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 16px;
-  border: 1px solid #EAEAEA;
-  border-radius: 6px;
-  width: 240px;
-  height: 160px;
-  background: white;
-  transition: all 0.5s;
-}
-.slide-repair-techniques:hover {
-  border: 1px solid #B8FFEC;
-  background: rgba(0, 0, 0, 0.2);
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.slide-repair-techniques__name {
+.slide-content__name {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
@@ -1588,60 +1584,12 @@ body {
   align-self: flex-start;
   margin: 0;
 }
-.slide-repair-techniques__link {
-  display: block;
-  min-width: 40px;
-  height: 40px;
-  background: transparent url(./static/goBrend.svg) no-repeat;
-  align-self: flex-end;
-  transition: 0.5s;
-}
-.slide-repair-techniques__link:hover {
-  transform: translateX(3px) scale(1.05);
-  -webkit-filter: contrast(3);
-          filter: contrast(3);
-}
-.slide-repair-techniques__link:active {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-@media (min-width: 768px) {
-  .slide-repair-techniques {
-    width: 224px;
-  }
-}
-@media (min-width: 1120px) {
-  .slide-repair-techniques {
-    width: 240px;
-  }
-}
-
-.slide-price {
-  box-sizing: border-box;
-  height: 200px;
-  width: 260px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #EAEAEA;
-  border-radius: 6px;
-  background: white;
-  transition: all 0.5s;
-}
-.slide-price:hover {
-  border: 1px solid #B8FFEC;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.slide-price__name-field {
+.slide-content__name-field {
   color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
 }
-.slide-price__value-field {
+.slide-content__value-field {
   line-height: 18px;
   letter-spacing: 0.2px;
   margin: 5px 0 0 0;
@@ -1649,7 +1597,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
-.slide-price__button-action {
+.slide-content__button-action {
   top: -10px;
 }
 
