@@ -1,0 +1,105 @@
+@import "vars-colors.scss";
+
+.slide-content{
+	display: flex;
+	box-sizing: border-box;
+	background: white;
+	width: 240px;
+	justify-content: space-between;
+	border: 1px solid $pseudoCol;
+	border-radius: 6px;
+	transition: all 0.5s;
+
+	@media (min-width:768px){
+		&{
+			width: 224px;	
+		}
+	}
+	@media (min-width:1120px){
+		&{
+			width: 240px;
+		}
+	}
+
+	&:hover{
+		border: 1px solid $borderSlider;
+		border-radius: 8px;
+		background: rgba(0,0,0,0.2);
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	&--brends{
+		align-items: center;
+		height: 70px;
+		padding:0 16px;
+	}
+
+	&--repair-techniques{
+		padding: 16px;
+		height: 160px;
+		flex-direction: column;
+	}
+
+	&--price{
+		height: 200px;
+		width: 260px;
+		padding: 16px;
+		flex-direction: column;
+	}
+
+
+	&__img{
+		display: block;
+	}
+	
+	&__link{
+		flex-shrink: 0;
+		display: block;
+		min-width: 40px;
+		height: 40px;
+		background: transparent url(../img/icon/goBrend.svg) no-repeat;
+		transition: 0.5s;
+		
+		&:hover{
+			transform: translateX(3px) scale(1.05);
+			filter: contrast(3);
+		}
+
+		&:active{
+			filter: invert(1);
+		}
+
+		&--fe{
+			align-self: flex-end;
+		}
+	}
+
+	&__name { 
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		font-weight: 500;
+		text-align: left;
+		align-self: flex-start;
+		margin: 0;
+	}
+
+	&__name-field{
+		color: $greyText;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	&__value-field{
+		line-height: 18px;
+		letter-spacing: 0.2px;
+		margin: 5px 0 0 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__button-action{
+		top: -10px;
+	}
+}
