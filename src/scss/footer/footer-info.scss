@@ -4,6 +4,8 @@
 	
 	display: grid;
 	grid-template-columns: 1fr;
+	color: $greyText;
+	font-size: 14px;
 
 	&__item {
 		text-align: center;
@@ -11,7 +13,7 @@
 	}
 
 	&__link{
-		color: $butMenuCol;
+		color: $greyText;
 		text-decoration: none;
 		display: block;
 		transition: 0.5s;

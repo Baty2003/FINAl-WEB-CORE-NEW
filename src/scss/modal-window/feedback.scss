@@ -28,17 +28,20 @@
 		padding: 0 16px;
 	}
 
-	&__field {
+	&__label{
 		display: block;
+	}
+
+	&__field {
 		width: 100%;
-		height: 48px;
+		min-height: 48px;
+		padding-left: 16px;
 		border: 1px solid $pseudoCol;
 		font-size: 18px;
 		border-radius: 8px;
 		font-family: "TT Lakes";
 
 		&::placeholder{
-			padding-left: 16px;
 			color: $textPlaceholder;
 			font-size: 16px;
 			font-family: "TT Lakes";

@@ -22,7 +22,7 @@
 		margin: 4px 16px 0 0;
 	}
 
-	&__item-logo {
+	&__item-logo .nav-menu__link{
 		width: 100px;
 		height: 50px;
 	}
@@ -34,6 +34,10 @@
 		height: 40px;
 		text-decoration: none;
 		transition: all 0.3s;
+		
+		&:hover{
+			transform: scale(1.05);
+		}
 	}
 	&__link::after {
 		content:'';
@@ -47,7 +51,6 @@
 		transition: 0.5s;
 	}
 	&__link:hover.nav-menu__link::after {
-		
 		transform: scale(1.05);
 		opacity: 0.8;
 	}

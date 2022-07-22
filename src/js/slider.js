@@ -2,8 +2,9 @@ import Swiper, { Navigation, Pagination } from 'swiper'
 import 'swiper/swiper-bundle.css'
 Swiper.use([Navigation, Pagination])
 
-let swipersContainers = document.querySelectorAll('.swiper')
+const swipersContainers = document.querySelectorAll('.swiper')
 let swipers = []
+
 const breakpoint = window.matchMedia('(min-width:768px)')
 
 function createSwiper(elem) {
@@ -43,7 +44,7 @@ const breakpointChecker = function () {
   }
 }
 
-function startSwiper() {
+const startSwiper = function () {
   if (breakpoint.matches === false) {
     for (const container of swipersContainers) {
       swipers.push(createSwiper(container))

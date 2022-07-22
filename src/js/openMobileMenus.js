@@ -3,16 +3,15 @@ const buttonCloseMobileMenu = document.getElementById('buttonCloseMobileMenu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const flexContent = document.querySelector('.flex-container__content')
 
-const buttonOpenFeedback = document.getElementById('buttonOpenFeedbackMenu')
-const buttonCloseFeedback = document.getElementById('buttonCloseFeedbackMenu')
-const feedbackMenu = document.getElementById('feedbackMenu')
+const buttonsOpenFeedbackMenu = document.querySelectorAll('.feedback-button')
+const buttonsOpenOrderCallMenu = document.querySelectorAll('.order-call-button')
 
-const buttonOpenOrderCallMenu = document.getElementById(
-  'buttonOpenOrderCallMenu'
-)
+const buttonCloseFeedback = document.getElementById('buttonCloseFeedbackMenu')
 const buttonCloseOrderCallMenu = document.getElementById(
   'buttonCloseOrderCallMenu'
 )
+
+const feedbackMenu = document.getElementById('feedbackMenu')
 const OrderCallMenu = document.getElementById('orderCallMenu')
 
 const buttonListenerOpenMenus = () => {
@@ -27,21 +26,30 @@ const buttonListenerOpenMenus = () => {
     flexContent.style.pointerEvents = 'auto'
   })
 
-  buttonOpenFeedback.addEventListener('click', () => {
-    feedbackMenu.classList.add('feedback--active')
-    flexContent.classList.add('flex-container__content--blur')
-    flexContent.style.pointerEvents = 'none'
-  })
+  for (const button of buttonsOpenFeedbackMenu) {
+    button.addEventListener('click', (evt) => {
+      evt.preventDefault()
+      feedbackMenu.classList.add('feedback--active')
+      feedbackMenu.querySelector('.feedback__field:first-child').focus()
+      flexContent.classList.add('flex-container__content--blur')
+      flexContent.style.pointerEvents = 'none'
+    })
+  }
+
+  for (const button of buttonsOpenOrderCallMenu) {
+    button.addEventListener('click', (evt) => {
+      evt.preventDefault()
+      OrderCallMenu.classList.add('feedback--active')
+      OrderCallMenu.querySelector('.feedback__field:first-child').focus()
+      flexContent.classList.add('flex-container__content--blur')
+      flexContent.style.pointerEvents = 'none'
+    })
+  }
+
   buttonCloseFeedback.addEventListener('click', () => {
     feedbackMenu.classList.remove('feedback--active')
     flexContent.classList.remove('flex-container__content--blur')
     flexContent.style.pointerEvents = 'auto'
-  })
-
-  buttonOpenOrderCallMenu.addEventListener('click', () => {
-    OrderCallMenu.classList.add('feedback--active')
-    flexContent.classList.add('flex-container__content--blur')
-    flexContent.style.pointerEvents = 'none'
   })
   buttonCloseOrderCallMenu.addEventListener('click', () => {
     OrderCallMenu.classList.remove('feedback--active')

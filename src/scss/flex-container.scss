@@ -1,6 +1,7 @@
 .flex-container{
 	display: block;
 	flex-direction: row-reverse;
+	position: relative;
 
 	&__content{
 		position: relative;
@@ -8,8 +9,18 @@
 		&--blur{
 			filter: opacity(0.4) blur(1px);
 		}
+		@media (min-width:1440px){
+			&{
+				width: calc(100% - 320px);
+			}
+		}
+		
 	}
-
+	&__mobile-menu{
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+	}
 
 
 	@media (min-width:1440px){

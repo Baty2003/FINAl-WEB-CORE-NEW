@@ -4,16 +4,20 @@ const initLessMoreButton = function (
   idSectionWithButtons,
   countHiddenElements
 ) {
-  let sectionWithButtons = document.getElementById(idSectionWithButtons)
-  let buttonLess = sectionWithButtons.querySelector('.section__read-more--less')
-  let buttonMore = sectionWithButtons.querySelector('.section__read-more--show')
-  let containersElements = sectionWithButtons.querySelector('.swiper-wrapper')
+  const sectionWithButtons = document.getElementById(idSectionWithButtons)
+  const buttonLess = sectionWithButtons.querySelector(
+    '.section__read-more--less'
+  )
+  const buttonMore = sectionWithButtons.querySelector(
+    '.section__read-more--show'
+  )
+  const containersElements = sectionWithButtons.querySelector('.swiper-wrapper')
 
   if (!buttonLess || !buttonMore || !containersElements) {
     return
   }
 
-  let elemsHidden = containersElements.querySelectorAll(
+  const elemsHidden = containersElements.querySelectorAll(
     `.swiper-slide:nth-child(${countHiddenElements}) ~ .swiper-slide:not(.swiper-slide-duplicate-prev, .swiper-slide-duplicate-active,.swiper-slide-prev,.swiper-slide-active, .swiper-slide-next)`
   )
 

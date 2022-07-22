@@ -10,6 +10,10 @@
 		letter-spacing: -0.2px;
 		font-weight: 500;
 		margin-bottom: 32px;
+
+		&:active{
+			background: blue;
+		}
 	}
 	&__link {
 		text-decoration: none;
@@ -22,7 +26,7 @@
 		border-bottom: 1px solid #41F6D7;
 	}
 	
-	&__item--active a{
+	&__item--active{
 		color: #7E7E82;
 	}
 	
