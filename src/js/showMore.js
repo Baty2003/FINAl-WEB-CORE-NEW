@@ -51,7 +51,6 @@ const initLessMoreButton = function (
     } else {
       for (const elem of elemsHidden) {
         elem.style.display = null
-        console.log(elemsHidden)
       }
     }
   })
